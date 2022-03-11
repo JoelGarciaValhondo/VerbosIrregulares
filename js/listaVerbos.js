@@ -145,3 +145,25 @@ var verbos = [
 ["wring","wrung","wrung","torcer"],
 ["write","wrote","written","escribir"]
 ];
+
+function sacarVerbo1(){            
+    var i = 0;
+    var numeroRandom2 = Math.floor((Math.random() * (2 - 0 + 1)) + 0);
+    var verbo1 = verbos[i][numeroRandom2].toString();
+    return verbo1;
+    if(palabraIntroducida = verbos[i][3].toString()){
+        console.log("suma 1 al primer verbo");
+        i++;
+    }
+}
+
+function sacarVerbo2(){
+    var i=0;
+    var numeroRandom3 = Math.floor((Math.random() * (2 - 0 + 1)) + 0);
+    var verbo2 = verbos[i][numeroRandom3].toString();
+    return verbo2;
+    if(palabraIntroducida = verbos[i][3].toString()){
+        console.log("suma 1 al segundo verbo");
+        i++;
+    }
+}
