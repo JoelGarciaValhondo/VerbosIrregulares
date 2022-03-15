@@ -172,12 +172,15 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/listaVerbos.js"></script>
     <script>
+        let contador=0;
         function comprobarPalabra(){
-                var i=0;
                 var palabraIntroducida = document.getElementById('textoIntroducido').value;
-                if(palabraIntroducida = verbos[i][3].toString()){
+                if(palabraIntroducida = verbos[contador][3].toString()){
                     console.log("esta va bien");
-                    i++;
+                    contador = contador + 1;
+                }
+                else{
+                    console.log("esta no va bien");
                 }
         }
     </script>   
