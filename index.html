@@ -36,33 +36,33 @@
                 <div class="row">
                     <div class="col-2"><!--Espacio en blanco--></div>
                     <div class="col-3 d-grid"><button onclick="document.getElementById('ventanaInicial').style.display = 'none'; 
-                                                                document.getElementById('ventanaSecundaria').style.display = 'block';" type="button" class="btn btn-lg btn-warning">10</button></div>
+                                                                document.getElementById('ventanaSecundaria').style.display = 'block';nivel10()" type="button" class="btn btn-lg btn-warning">10</button></div>
                     <div class="col-2 d-grid"><button onclick="document.getElementById('ventanaInicial').style.display = 'none'; 
-                                                                document.getElementById('ventanaSecundaria').style.display = 'block';" type="button" class="btn btn-lg btn-warning">20</button></div>
+                                                                document.getElementById('ventanaSecundaria').style.display = 'block';nivel20()" type="button" class="btn btn-lg btn-warning">20</button></div>
                     <div class="col-3 d-grid"><button onclick="document.getElementById('ventanaInicial').style.display = 'none'; 
-                                                                document.getElementById('ventanaSecundaria').style.display = 'block';" type="button" class="btn btn-lg btn-warning">30</button></div>
+                                                                document.getElementById('ventanaSecundaria').style.display = 'block';nivel30()" type="button" class="btn btn-lg btn-warning">30</button></div>
                     <div class="col-2"><!--Espacio en blanco--></div>
                 </div><br><br><br><br>
                 <!--Segunda fila de botones-->
                 <div class="row">
                     <div class="col-2"><!--Espacio en blanco--></div>
                     <div class="col-3 d-grid"><button onclick="document.getElementById('ventanaInicial').style.display = 'none'; 
-                                                                document.getElementById('ventanaSecundaria').style.display = 'block';" type="button" class="btn btn-lg btn-warning">40</button></div>
+                                                                document.getElementById('ventanaSecundaria').style.display = 'block';nivel40()" type="button" class="btn btn-lg btn-warning">40</button></div>
                     <div class="col-2 d-grid"><button onclick="document.getElementById('ventanaInicial').style.display = 'none'; 
-                                                                document.getElementById('ventanaSecundaria').style.display = 'block';" type="button" class="btn btn-lg btn-warning">50</button></div>
+                                                                document.getElementById('ventanaSecundaria').style.display = 'block';nivel50()" type="button" class="btn btn-lg btn-warning">50</button></div>
                     <div class="col-3 d-grid"><button onclick="document.getElementById('ventanaInicial').style.display = 'none'; 
-                                                                document.getElementById('ventanaSecundaria').style.display = 'block';" type="button" class="btn btn-lg btn-warning">60</button></div>
+                                                                document.getElementById('ventanaSecundaria').style.display = 'block';nivel60()" type="button" class="btn btn-lg btn-warning">60</button></div>
                     <div class="col-2"><!--Espacio en blanco--></div>
                 </div><br><br><br><br>
                 <!--Tercera fila de botones-->
                 <div class="row">
                     <div class="col-2"><!--Espacio en blanco--></div>
                     <div class="col-3 d-grid"><button onclick="document.getElementById('ventanaInicial').style.display = 'none'; 
-                                                                document.getElementById('ventanaSecundaria').style.display = 'block';" type="button" class="btn btn-lg btn-warning">70</button></div>
+                                                                document.getElementById('ventanaSecundaria').style.display = 'block';nivel70()" type="button" class="btn btn-lg btn-warning">70</button></div>
                     <div class="col-2 d-grid"><button onclick="document.getElementById('ventanaInicial').style.display = 'none';
-                                                                document.getElementById('ventanaSecundaria').style.display = 'block';" type="button" class="btn btn-lg btn-warning">80</button></div>
+                                                                document.getElementById('ventanaSecundaria').style.display = 'block';nivel80()" type="button" class="btn btn-lg btn-warning">80</button></div>
                     <div class="col-3 d-grid"><button onclick="document.getElementById('ventanaInicial').style.display = 'none'; 
-                                                                document.getElementById('ventanaSecundaria').style.display = 'block';" type="button" class="btn btn-lg btn-warning">140</button></div>
+                                                                document.getElementById('ventanaSecundaria').style.display = 'block';nivel140()" type="button" class="btn btn-lg btn-warning">140</button></div>
                     <div class="col-2"><!--Espacio en blanco--></div>
                 </div><br><br><br><br>
             </div>
@@ -107,12 +107,12 @@
                 <div class="col-3"></div>
                 <div class="col-2 d-grid">
                     <button type="button" class="btn btn-lg btn-warning" id="primerVerbo"  disabled>
-                        <script>document.write(sacarVerbo1());</script>
+                        <span id="textoPrimerVerbo"><script>document.write(sacarVerbo1(0));</script></span>
                     </button>
                 </div>
                 <div class="col-2 d-grid">
                     <button type="button" class="btn btn-lg btn-warning" id="segundoVerbo" disabled>
-                        <script>document.write(sacarVerbo2());</script>
+                        <span id="textoSegundoVerbo"><script>document.write(sacarVerbo2(0));</script></span>
                     </button>
                 </div>
                 <div class="col-2 d-grid"><input type="text" id="textoIntroducido" style="border-style: solid; border-color: yellow;"></div>
@@ -122,7 +122,7 @@
             <div class="row">
                 <div class="col-4"></div>
                 <div class="col-4 d-grid">
-                    <button onclick="comprobarPalabra();" type="button" class="btn btn-lg btn-danger">Comprueba</button>
+                    <button id="compruebaPalabra" onclick="comprobarPalabra();" type="button" class="btn btn-lg btn-danger"><span id="comprueba">Comprueba</span></button>
                 </div>
                 <div class="col-4"></div>
             </div><br><br><br>
@@ -142,47 +142,81 @@
                 <!--Primera fila de botones-->
                 <div class="row">
                     <div class="col-2"><!--Espacio en blanco--></div>
-                    <div class="col-3 d-grid"><button onclick="document.getElementById('botonesNiveles2').style.display = 'none';" type="button" class="btn btn-lg btn-warning">10</button></div>
-                    <div class="col-2 d-grid"><button onclick="document.getElementById('botonesNiveles2').style.display = 'none';" type="button" class="btn btn-lg btn-warning">20</button></div>
-                    <div class="col-3 d-grid"><button onclick="document.getElementById('botonesNiveles2').style.display = 'none';" type="button" class="btn btn-lg btn-warning">30</button></div>
+                    <div class="col-3 d-grid"><button id="nivel10" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel10()" type="button" class="btn btn-lg btn-warning">10</button></div>
+                    <div class="col-2 d-grid"><button id="nivel20" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel20()" type="button" class="btn btn-lg btn-warning">20</button></div>
+                    <div class="col-3 d-grid"><button id="nivel30" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel30()" type="button" class="btn btn-lg btn-warning">30</button></div>
                     <div class="col-2"><!--Espacio en blanco--></div>
                 </div><br><br><br><br>
                 <!--Segunda fila de botones-->
                 <div class="row">
                     <div class="col-2"><!--Espacio en blanco--></div>
-                    <div class="col-3 d-grid"><button onclick="document.getElementById('botonesNiveles2').style.display = 'none';" type="button" class="btn btn-lg btn-warning">40</button></div>
-                    <div class="col-2 d-grid"><button onclick="document.getElementById('botonesNiveles2').style.display = 'none';" type="button" class="btn btn-lg btn-warning">50</button></div>
-                    <div class="col-3 d-grid"><button onclick="document.getElementById('botonesNiveles2').style.display = 'none';" type="button" class="btn btn-lg btn-warning">60</button></div>
+                    <div class="col-3 d-grid"><button id="nivel40" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel40()" type="button" class="btn btn-lg btn-warning">40</button></div>
+                    <div class="col-2 d-grid"><button id="nivel50" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel50()" type="button" class="btn btn-lg btn-warning">50</button></div>
+                    <div class="col-3 d-grid"><button id="nivel60" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel60()" type="button" class="btn btn-lg btn-warning">60</button></div>
                     <div class="col-2"><!--Espacio en blanco--></div>
                 </div><br><br><br><br>
                 <!--Tercera fila de botones-->
                 <div class="row">
                     <div class="col-2"><!--Espacio en blanco--></div>
-                    <div class="col-3 d-grid"><button onclick="document.getElementById('botonesNiveles2').style.display = 'none';" type="button" class="btn btn-lg btn-warning">70</button></div>
-                    <div class="col-2 d-grid"><button onclick="document.getElementById('botonesNiveles2').style.display = 'none';" type="button" class="btn btn-lg btn-warning">80</button></div>
-                    <div class="col-3 d-grid"><button onclick="document.getElementById('botonesNiveles2').style.display = 'none';" type="button" class="btn btn-lg btn-warning">140</button></div>
+                    <div class="col-3 d-grid"><button id="nivel70" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel70()" type="button" class="btn btn-lg btn-warning">70</button></div>
+                    <div class="col-2 d-grid"><button id="nivel80" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel80()" type="button" class="btn btn-lg btn-warning">80</button></div>
+                    <div class="col-3 d-grid"><button id="nivel140" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel140()" type="button" class="btn btn-lg btn-warning">140</button></div>
                     <div class="col-2"><!--Espacio en blanco--></div>
                 </div><br><br><br><br>
             </div>
         </div>
-           
-        
+                
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/listaVerbos.js"></script>
-    <script>
-        let contador=0;
-        function comprobarPalabra(){
-                var palabraIntroducida = document.getElementById('textoIntroducido').value;
-                if(palabraIntroducida = verbos[contador][3].toString()){
-                    console.log("esta va bien");
-                    contador = contador + 1;
-                }
-                else{
-                    console.log("esta no va bien");
-                }
+    <script type="text/javascript">
+        let i=0;
+        let numeroNiveles = 0;
+        function nivel10(){
+            numeroNiveles=10;
         }
-    </script>   
+        function nivel20(){
+            numeroNiveles=20;
+        }
+        function nivel30(){
+            numeroNiveles=30;
+        }
+        function nivel40(){
+            numeroNiveles=40;
+        }
+        function nivel50(){
+            numeroNiveles=50;
+        }
+        function nivel60(){
+            numeroNiveles=60;
+        }
+        function nivel70(){
+            numeroNiveles=70;
+        }
+        function nivel80(){
+            numeroNiveles=80;
+        }
+        function nivel140(){
+            numeroNiveles=140;
+        }
+        function comprobarPalabra(){
+                var palabraIntroducida = document.getElementById('textoIntroducido').value.toString();
+                if(verbos[i][2].includes(palabraIntroducida)){
+                    document.getElementById('textoPrimerVerbo').textContent = verbos[i+1][0];
+                    document.getElementById('textoSegundoVerbo').textContent = verbos[i+1][1];
+                    document.getElementById('comprueba').textContent = "Comprueba";
+                    document.getElementById('textoIntroducido').value = "";
+                    i++;                  
+                }else{
+                    document.getElementById('comprueba').textContent = "MAL, es: " + verbos[i][2];
+                }
+                if(i > numeroNiveles){
+                    document.getElementById('comprueba').textContent = "Enhorabuena, has completado este Nivel!";
+                    let button = document.getElementById('compruebaPalabra');
+                    button.disabled = true;
+                }            
+        }  
+    </script> 
 </body>
 </html>

@@ -147,15 +147,15 @@ var verbos = [
 ];
 
 
-function sacarVerbo1(){            
-    var i = 0;
-    var verbo1 = verbos[i][0].toString();
+
+function sacarVerbo1(i){  
+    var numero=i;         
+    var verbo1 = verbos[numero][0].toString();
     return verbo1;
 }
 
-function sacarVerbo2(){
-    var i=0;
-    var numeroRandom3 = Math.floor((Math.random() * (2 - 1)) + 1);
-    var verbo2 = verbos[i][numeroRandom3].toString();
-    return verbo2;
+function sacarVerbo2(i){
+var numero=i;
+var verbo2 = verbos[numero][1].toString();
+return verbo2;
 }
