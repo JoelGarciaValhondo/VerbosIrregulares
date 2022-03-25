@@ -10,17 +10,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="js/listaVerbos.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 </head>
 <body>
         <!--Contenedor ventana incial (se hace asi para poder ocultarlo y volver a mostrarlo)-->
         <div class="container-flex" id="ventanaInicial">
             <!--Texto de verbos irregulares-->
             <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8 d-grid">
+                <div class="col-12 d-grid">
                     <button type="button" class="btn btn-lg btn-danger" disabled>Test Verbos Irregulares</button>
                 </div>
-                <div class="col-2"></div>
             </div><br><br><br><br>
             <!--Texto elegir nivel-->
             <div class="row">
@@ -72,27 +71,32 @@
         <div class="container-flex" id="ventanaSecundaria"  style="display: none;">
             <!--Nivel-->
             <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8 d-grid">
-                    <button type="button" class="btn btn-lg btn-danger" disabled>Nivel 1</button>
+                <div class="col-12 d-grid">
+                    <button type="button" class="btn btn-lg btn-danger" id="nivel" disabled>Nivel 1</button>
                 </div>
-                <div class="col-2"></div>
             </div><br><br>
             <!--Texto de verbos irregulares-->
             <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8 d-grid">
+                <div class="col-12 d-grid">
                     <button type="button" class="btn btn-lg btn-light" disabled>Test Verbos Irregulares</button>
                 </div>
-                <div class="col-2"></div>
             </div><br><br> 
             <!--Añadimos estrellas-->
             <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8 d-grid">
-                    <button type="button" class="btn btn-lg btn-danger" disabled>☆☆☆☆☆☆☆☆☆☆</button>
+                <div class="col-12 d-grid">
+                    <button type="button" class="btn btn-lg btn-danger" disabled>
+                        <span class="fa fa-star" id="estrella1"></span>
+                        <span class="fa fa-star" id="estrella2"></span>
+                        <span class="fa fa-star" id="estrella3"></span>
+                        <span class="fa fa-star" id="estrella4"></span>
+                        <span class="fa fa-star" id="estrella5"></span>
+                        <span class="fa fa-star" id="estrella6"></span>
+                        <span class="fa fa-star" id="estrella7"></span>
+                        <span class="fa fa-star" id="estrella8"></span>
+                        <span class="fa fa-star" id="estrella9"></span>
+                        <span class="fa fa-star" id="estrella10"></span>
+                    </button>
                 </div>
-                <div class="col-2"></div>
             </div><br><br>
             <!--Texto elegir que escribes-->
             <div class="row">
@@ -104,27 +108,27 @@
             </div><br><br>
             <!--Tres verbos (formas)-->
             <div class="row">
-                <div class="col-3"></div>
-                <div class="col-2 d-grid">
+                <div class="col-1"></div>
+                <div class="col-4 d-grid">
                     <button type="button" class="btn btn-lg btn-warning" id="primerVerbo"  disabled>
                         <span id="textoPrimerVerbo"><script>document.write(sacarVerbo1(0));</script></span>
                     </button>
                 </div>
-                <div class="col-2 d-grid">
+                <div class="col-4 d-grid">
                     <button type="button" class="btn btn-lg btn-warning" id="segundoVerbo" disabled>
                         <span id="textoSegundoVerbo"><script>document.write(sacarVerbo2(0));</script></span>
                     </button>
                 </div>
                 <div class="col-2 d-grid"><input type="text" id="textoIntroducido" style="border-style: solid; border-color: yellow;"></div>
-                <div class="col-3"></div>
+                <div class="col-1"></div>
             </div><br><br><br>
             <!--Boton Comprobar-->
             <div class="row">
-                <div class="col-4"></div>
-                <div class="col-4 d-grid">
+                <div class="col-3"></div>
+                <div class="col-6 d-grid">
                     <button id="compruebaPalabra" onclick="comprobarPalabra();" type="button" class="btn btn-lg btn-danger"><span id="comprueba">Comprueba</span></button>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-3"></div>
             </div><br><br><br>
             <!--Boton cambiar nivel-->
             <div class="row">
@@ -142,25 +146,25 @@
                 <!--Primera fila de botones-->
                 <div class="row">
                     <div class="col-2"><!--Espacio en blanco--></div>
-                    <div class="col-3 d-grid"><button id="nivel10" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel10()" type="button" class="btn btn-lg btn-warning">10</button></div>
-                    <div class="col-2 d-grid"><button id="nivel20" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel20()" type="button" class="btn btn-lg btn-warning">20</button></div>
-                    <div class="col-3 d-grid"><button id="nivel30" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel30()" type="button" class="btn btn-lg btn-warning">30</button></div>
+                    <div class="col-3 d-grid"><button id="nivel10" onclick="document.getElementById('botonesNivelesPag2').style.display = 'none'; nivel10()" type="button" class="btn btn-lg btn-warning">10</button></div>
+                    <div class="col-2 d-grid"><button id="nivel20" onclick="document.getElementById('botonesNivelesPag2').style.display = 'none'; nivel20()" type="button" class="btn btn-lg btn-warning">20</button></div>
+                    <div class="col-3 d-grid"><button id="nivel30" onclick="document.getElementById('botonesNivelesPag2').style.display = 'none'; nivel30()" type="button" class="btn btn-lg btn-warning">30</button></div>
                     <div class="col-2"><!--Espacio en blanco--></div>
                 </div><br><br><br><br>
                 <!--Segunda fila de botones-->
                 <div class="row">
                     <div class="col-2"><!--Espacio en blanco--></div>
-                    <div class="col-3 d-grid"><button id="nivel40" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel40()" type="button" class="btn btn-lg btn-warning">40</button></div>
-                    <div class="col-2 d-grid"><button id="nivel50" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel50()" type="button" class="btn btn-lg btn-warning">50</button></div>
-                    <div class="col-3 d-grid"><button id="nivel60" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel60()" type="button" class="btn btn-lg btn-warning">60</button></div>
+                    <div class="col-3 d-grid"><button id="nivel40" onclick="document.getElementById('botonesNivelesPag2').style.display = 'none'; nivel40()" type="button" class="btn btn-lg btn-warning">40</button></div>
+                    <div class="col-2 d-grid"><button id="nivel50" onclick="document.getElementById('botonesNivelesPag2').style.display = 'none'; nivel50()" type="button" class="btn btn-lg btn-warning">50</button></div>
+                    <div class="col-3 d-grid"><button id="nivel60" onclick="document.getElementById('botonesNivelesPag2').style.display = 'none'; nivel60()" type="button" class="btn btn-lg btn-warning">60</button></div>
                     <div class="col-2"><!--Espacio en blanco--></div>
                 </div><br><br><br><br>
                 <!--Tercera fila de botones-->
                 <div class="row">
                     <div class="col-2"><!--Espacio en blanco--></div>
-                    <div class="col-3 d-grid"><button id="nivel70" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel70()" type="button" class="btn btn-lg btn-warning">70</button></div>
-                    <div class="col-2 d-grid"><button id="nivel80" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel80()" type="button" class="btn btn-lg btn-warning">80</button></div>
-                    <div class="col-3 d-grid"><button id="nivel140" onclick="document.getElementById('botonesNiveles2').style.display = 'none'; nivel140()" type="button" class="btn btn-lg btn-warning">140</button></div>
+                    <div class="col-3 d-grid"><button id="nivel70" onclick="document.getElementById('botonesNivelesPag2').style.display = 'none'; nivel70()" type="button" class="btn btn-lg btn-warning">70</button></div>
+                    <div class="col-2 d-grid"><button id="nivel80" onclick="document.getElementById('botonesNivelesPag2').style.display = 'none'; nivel80()" type="button" class="btn btn-lg btn-warning">80</button></div>
+                    <div class="col-3 d-grid"><button id="nivel140" onclick="document.getElementById('botonesNivelesPag2').style.display = 'none'; nivel140()" type="button" class="btn btn-lg btn-warning">140</button></div>
                     <div class="col-2"><!--Espacio en blanco--></div>
                 </div><br><br><br><br>
             </div>
@@ -173,50 +177,238 @@
     <script type="text/javascript">
         let i=0;
         let numeroNiveles = 0;
-        function nivel10(){
+        let contadorParaEstrellas = 0;
+        let contador2 = 0;
+        let contador3 = 0;
+        let contador4 = 0;
+        let contador5 = 0;
+        let contador6 = 0;
+        let contador7 = 0;
+        let contador8 = 0;
+        let contador14 = 0;
+
+        function estrellasACero(){
+            document.getElementById('estrella1').style.color="white";
+            document.getElementById('estrella2').style.color="white";
+            document.getElementById('estrella3').style.color="white";
+            document.getElementById('estrella4').style.color="white";
+            document.getElementById('estrella5').style.color="white";
+            document.getElementById('estrella6').style.color="white";
+            document.getElementById('estrella7').style.color="white";
+            document.getElementById('estrella8').style.color="white";
+            document.getElementById('estrella9').style.color="white";
+            document.getElementById('estrella10').style.color="white";
+        }function nivel10(){
             numeroNiveles=10;
+            i=0;
+            document.getElementById('textoPrimerVerbo').textContent = verbos[i][0];
+            document.getElementById('textoSegundoVerbo').textContent = verbos[i][1];
+            contadorParaEstrellas = 0;
+            estrellasACero();
+            document.getElementById('comprueba').textContent = "Comprueba";
+            let button = document.getElementById('compruebaPalabra');
+            button.disabled = false;
+            document.getElementById('nivel').textContent = "Nivel 1";
         }
         function nivel20(){
             numeroNiveles=20;
+            i=0;
+            document.getElementById('textoPrimerVerbo').textContent = verbos[i][0];
+            document.getElementById('textoSegundoVerbo').textContent = verbos[i][1];
+            contadorParaEstrellas = 0;
+            estrellasACero();
+            document.getElementById('comprueba').textContent = "Comprueba";
+            let button = document.getElementById('compruebaPalabra');
+            button.disabled = false;
+            document.getElementById('nivel').textContent = "Nivel 2";
         }
         function nivel30(){
             numeroNiveles=30;
+            i=0;
+            document.getElementById('textoPrimerVerbo').textContent = verbos[i][0];
+            document.getElementById('textoSegundoVerbo').textContent = verbos[i][1];
+            contadorParaEstrellas = 0;
+            estrellasACero();
+            document.getElementById('comprueba').textContent = "Comprueba";
+            let button = document.getElementById('compruebaPalabra');
+            button.disabled = false;
+            document.getElementById('nivel').textContent = "Nivel 3";
         }
         function nivel40(){
             numeroNiveles=40;
+            i=0;
+            document.getElementById('textoPrimerVerbo').textContent = verbos[i][0];
+            document.getElementById('textoSegundoVerbo').textContent = verbos[i][1];
+            contadorParaEstrellas = 0;
+            estrellasACero();
+            document.getElementById('comprueba').textContent = "Comprueba";
+            let button = document.getElementById('compruebaPalabra');
+            button.disabled = false;
+            document.getElementById('nivel').textContent = "Nivel 4";
         }
         function nivel50(){
             numeroNiveles=50;
+            i=0;
+            document.getElementById('textoPrimerVerbo').textContent = verbos[i][0];
+            document.getElementById('textoSegundoVerbo').textContent = verbos[i][1];
+            contadorParaEstrellas = 0;
+            estrellasACero();
+            document.getElementById('comprueba').textContent = "Comprueba";
+            let button = document.getElementById('compruebaPalabra');
+            button.disabled = false;
+            document.getElementById('nivel').textContent = "Nivel 5";
         }
         function nivel60(){
             numeroNiveles=60;
+            i=0;
+            document.getElementById('textoPrimerVerbo').textContent = verbos[i][0];
+            document.getElementById('textoSegundoVerbo').textContent = verbos[i][1];
+            contadorParaEstrellas = 0;
+            estrellasACero();
+            document.getElementById('comprueba').textContent = "Comprueba";
+            let button = document.getElementById('compruebaPalabra');
+            button.disabled = false;
+            document.getElementById('nivel').textContent = "Nivel 6";
         }
         function nivel70(){
             numeroNiveles=70;
+            i=0;
+            document.getElementById('textoPrimerVerbo').textContent = verbos[i][0];
+            document.getElementById('textoSegundoVerbo').textContent = verbos[i][1];
+            contadorParaEstrellas = 0;
+            estrellasACero();
+            document.getElementById('comprueba').textContent = "Comprueba";
+            let button = document.getElementById('compruebaPalabra');
+            button.disabled = false;
+            document.getElementById('nivel').textContent = "Nivel 7";
         }
         function nivel80(){
             numeroNiveles=80;
+            i=0;
+            document.getElementById('textoPrimerVerbo').textContent = verbos[i][0];
+            document.getElementById('textoSegundoVerbo').textContent = verbos[i][1];
+            contadorParaEstrellas = 0;
+            estrellasACero();
+            document.getElementById('comprueba').textContent = "Comprueba";
+            let button = document.getElementById('compruebaPalabra');
+            button.disabled = false;
+            document.getElementById('nivel').textContent = "Nivel 8";
         }
         function nivel140(){
             numeroNiveles=140;
+            i=0;
+            document.getElementById('textoPrimerVerbo').textContent = verbos[i][0];
+            document.getElementById('textoSegundoVerbo').textContent = verbos[i][1];
+            contadorParaEstrellas = 0;
+            estrellasACero();
+            document.getElementById('comprueba').textContent = "Comprueba";
+            let button = document.getElementById('compruebaPalabra');
+            button.disabled = false;
+            document.getElementById('nivel').textContent = "Nivel 14";
         }
         function comprobarPalabra(){
                 var palabraIntroducida = document.getElementById('textoIntroducido').value.toString();
-                if(verbos[i][2].includes(palabraIntroducida)){
+                if(verbos[i][2].includes(palabraIntroducida) && palabraIntroducida != ""){
                     document.getElementById('textoPrimerVerbo').textContent = verbos[i+1][0];
                     document.getElementById('textoSegundoVerbo').textContent = verbos[i+1][1];
                     document.getElementById('comprueba').textContent = "Comprueba";
                     document.getElementById('textoIntroducido').value = "";
-                    i++;                  
+                    i++;
+                    if(numeroNiveles==10){
+                        contadorParaEstrellas++;
+                    }
+                    if(numeroNiveles==20){ 
+                        contador2++;
+                        if(contador2 == 2){
+                            contadorParaEstrellas = 1;
+                        }
+                    }
+                    if(numeroNiveles==30){
+                        contador3++;
+                        if(contador3 == 3){
+                            contadorParaEstrellas = 1;
+                        }
+                    }
+                    if(numeroNiveles==40){
+                        contador4++;
+                        if(contador4 == 4){
+                            contadorParaEstrellas = 1;
+                        }
+                    }
+                    if(numeroNiveles==50){
+                        contador5++;
+                        if(contador5 == 5){
+                            contadorParaEstrellas = 1;
+                        }
+                    }
+                    if(numeroNiveles==60){
+                        contador6++;
+                        if(contador6 == 6){
+                            contadorParaEstrellas = 1;
+                        }
+                    }
+                    if(numeroNiveles==70){
+                        contador7++;
+                        if(contador7 == 7){
+                            contadorParaEstrellas = 1;
+                        }
+                    }
+                    if(numeroNiveles==80){
+                        contador8++;
+                        if(contador8 == 8){
+                            contadorParaEstrellas = 1;
+                        }
+                    }
+                    if(numeroNiveles==140){
+                        contador14++;
+                        if(contador14 == 14){
+                            contadorParaEstrellas = 1;
+                        }
+                    }
+                    if(contadorParaEstrellas == 1){
+                            document.getElementById('estrella1').style.color="yellow";
+                        }
+                        if(contadorParaEstrellas == 2){
+                            document.getElementById('estrella2').style.color="yellow";
+                        }
+                        if(contadorParaEstrellas == 3){
+                            document.getElementById('estrella3').style.color="yellow";
+                        }
+                        if(contadorParaEstrellas == 4){
+                            document.getElementById('estrella4').style.color="yellow";
+                        }
+                        if(contadorParaEstrellas == 5){
+                            document.getElementById('estrella5').style.color="yellow";
+                        }
+                        if(contadorParaEstrellas == 6){
+                            document.getElementById('estrella6').style.color="yellow";
+                        }
+                        if(contadorParaEstrellas == 7){
+                            document.getElementById('estrella7').style.color="yellow";
+                        }
+                        if(contadorParaEstrellas == 8){
+                            document.getElementById('estrella8').style.color="yellow";
+                        }
+                        if(contadorParaEstrellas == 9){
+                            document.getElementById('estrella9').style.color="yellow";
+                        }
+                        if(contadorParaEstrellas == 10 && numeroNiveles != 140){
+                            document.getElementById('estrella10').style.color="yellow";
+                        }
+                        if(contadorParaEstrellas == 14 && numeroNiveles == 140){
+                            document.getElementById('estrella10').style.color="yellow";
+                        }                 
                 }else{
                     document.getElementById('comprueba').textContent = "MAL, es: " + verbos[i][2];
                 }
-                if(i > numeroNiveles){
+                if(i == numeroNiveles){
                     document.getElementById('comprueba').textContent = "Enhorabuena, has completado este Nivel!";
                     let button = document.getElementById('compruebaPalabra');
                     button.disabled = true;
+                    document.getElementById('textoPrimerVerbo').textContent = "HAS";
+                    document.getElementById('textoSegundoVerbo').textContent = "GANADO";
                 }            
-        }  
+        }
     </script> 
 </body>
 </html>
